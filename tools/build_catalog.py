@@ -32,7 +32,9 @@ def run_example(path: Path) -> tuple[str, str | None]:
     except subprocess.TimeoutExpired:
         return "", "Example timed out"
 
-    output = result.stdout.strip()
+    # Remove only the final line break. Leading spaces are part of the pattern
+    # and must be preserved, especially on the first row of centered pyramids.
+    output = result.stdout.rstrip("\r\n")
     error = result.stderr.strip() or None
     return output[:1600], error
 
