@@ -18,7 +18,7 @@
     "difficulty": "Starter",
     "path": "patterns/star/pattern_2.py",
     "code": "def Pattern_Programs(n):\n    for i in range(1,n+1):\n        print(\" \"*(n-i)+\"*\"*i)\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "*\n   **\n  ***\n ****\n*****",
+    "output": "    *\n   **\n  ***\n ****\n*****",
     "verified": true
   },
   {
@@ -51,7 +51,7 @@
     "difficulty": "Starter",
     "path": "patterns/star/pattern_5.py",
     "code": "def Pattern_Programs(n):\n    sp=n-1\n    for i in range(1,n*2+1,2):\n        print(\" \"*sp+\"*\"*i)\n        sp-=1\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "*\n   ***\n  *****\n *******\n*********",
+    "output": "    *\n   ***\n  *****\n *******\n*********",
     "verified": true
   },
   {
@@ -73,7 +73,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/star/pattern_7.py",
     "code": "def Pattern_Programs(n):\n    star=1\n    osp=n-1\n    for i in range(1,n*2):\n        print(\" \"*osp+\"*\"*star)\n        if i<n:\n            star+=2\n            osp-=1\n        else:\n            star-=2\n            osp+=1\n\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "*\n   ***\n  *****\n *******\n*********\n *******\n  *****\n   ***\n    *",
+    "output": "    *\n   ***\n  *****\n *******\n*********\n *******\n  *****\n   ***\n    *",
     "verified": true
   },
   {
@@ -95,7 +95,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/star/pattern_9.py",
     "code": "def Pattern_Programs(n):\n    star=1\n    osp=n-1\n    for i in range(1,n*2):\n        print(\" \"*osp+\"*\"*star)\n        if i<n:\n            star+=1\n            osp-=1\n        else:\n            star-=1\n            osp+=1\n\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "*\n   **\n  ***\n ****\n*****\n ****\n  ***\n   **\n    *",
+    "output": "    *\n   **\n  ***\n ****\n*****\n ****\n  ***\n   **\n    *",
     "verified": true
   },
   {
@@ -106,7 +106,7 @@
     "difficulty": "Starter",
     "path": "patterns/star/pattern_10.py",
     "code": "def Pattern_Programs(n):\n    for i in range(n-1,-1,-1):\n        print(\" \"*i+\"*\"*n)\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "*****\n   *****\n  *****\n *****\n*****",
+    "output": "    *****\n   *****\n  *****\n *****\n*****",
     "verified": true
   },
   {
@@ -150,7 +150,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/star/pattern_14.py",
     "code": "def Pattern_Programs(n):\n    star=n\n    osp=0\n    for i in range(1,n*2):\n        print(\" \"*osp+\"* \"*star)\n        if i<n:\n            star-=1\n            osp+=1\n        else:\n            star+=1\n            osp-=1\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "* * * * * \n * * * * \n  * * * \n   * * \n    * \n   * * \n  * * * \n * * * * \n* * * * *",
+    "output": "* * * * * \n * * * * \n  * * * \n   * * \n    * \n   * * \n  * * * \n * * * * \n* * * * * ",
     "verified": true
   },
   {
@@ -172,7 +172,7 @@
     "difficulty": "Advanced",
     "path": "patterns/star/pattern_16.py",
     "code": "def Pattern_Programs(n):\n    osp=n-1\n    insp=0\n    for i in range(1,n+1):\n        if i == 1:\n            print(\" \"*osp+\"*\")\n        elif i == n:\n            print(\"*\" * n)\n        else:\n            print(\" \"*osp+\"*\" + \" \" * insp + \"*\")\n            insp += 1\n        osp-=1\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "*\n   **\n  * *\n *  *\n*****",
+    "output": "    *\n   **\n  * *\n *  *\n*****",
     "verified": true
   },
   {
@@ -205,7 +205,7 @@
     "difficulty": "Advanced",
     "path": "patterns/star/pattern_19.py",
     "code": "def Pattern_Programs(n):\n    osp=n-1\n    insp=1\n    for i in range(1,n+1):\n        if i==1:\n            print(\" \"*osp+\"*\")\n        elif i==n:\n            print(\"*\"*(n*2-1))\n        else:\n            print(\" \"*osp+\"*\"+\" \"*insp+\"*\")\n            insp+=2\n        osp-=1\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "*\n   * *\n  *   *\n *     *\n*********",
+    "output": "    *\n   * *\n  *   *\n *     *\n*********",
     "verified": true
   },
   {
@@ -227,7 +227,7 @@
     "difficulty": "Advanced",
     "path": "patterns/star/pattern_21.py",
     "code": "def Pattern_Programs(n):\n    osp=n-1\n    insp=-1\n    for i in range(1,n*2):\n        if i==1 or i==n*2-1:\n            print(\" \"*osp+\"*\")\n        else:\n            print(\" \"*osp+\"*\"+\" \"*insp+\"*\")\n        if i<n:\n            osp-=1\n            insp+=2\n        else:\n            osp+=1\n            insp-=2\n\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "*\n   * *\n  *   *\n *     *\n*       *\n *     *\n  *   *\n   * *\n    *",
+    "output": "    *\n   * *\n  *   *\n *     *\n*       *\n *     *\n  *   *\n   * *\n    *",
     "verified": true
   },
   {
@@ -249,7 +249,7 @@
     "difficulty": "Advanced",
     "path": "patterns/star/pattern_23.py",
     "code": "def Pattern_Programs(n):\n    insp=0\n    osp=n-2\n    for i in range(1,n*2):\n        if i==n*2-1 or i==1:\n            print(\" \"*(n-1)+\"*\")\n        else:\n            print(\" \"*osp+\"*\"+\" \"*insp+\"*\")\n            if i<n:\n                insp+=1\n                osp-=1\n            else:\n                insp-=1\n                osp+=1\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "*\n   **\n  * *\n *  *\n*   *\n *  *\n  * *\n   **\n    *",
+    "output": "    *\n   **\n  * *\n *  *\n*   *\n *  *\n  * *\n   **\n    *",
     "verified": true
   },
   {
@@ -260,7 +260,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/star/pattern_24.py",
     "code": "def Pattern_Programs(n):\n    osp=n-1\n    for i in range(1,n+1):\n        if i==1 or i==n:\n            print(\" \"*osp+\"*\"*n)\n        else:\n            print(\" \"*osp+\"*\"+\" \"*(n-2)+\"*\")\n        osp-=1\n\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "*****\n   *   *\n  *   *\n *   *\n*****",
+    "output": "    *****\n   *   *\n  *   *\n *   *\n*****",
     "verified": true
   },
   {
@@ -304,7 +304,7 @@
     "difficulty": "Advanced",
     "path": "patterns/star/pattern_28.py",
     "code": "def Pattern_Programs(n):\n    osp=n-1\n    insp=-1\n    for i in range(1,n*2):\n        if i==1 or i==n*2-1:\n            print(\" \"*osp+\"*\")\n        else:\n            print(\" \"*osp+\"*\"+\" \"*insp+\"*\")\n        if i<n:\n            osp-=1\n            insp+=2\n        else:\n            osp+=1\n            insp-=2\n\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "*\n   * *\n  *   *\n *     *\n*       *\n *     *\n  *   *\n   * *\n    *",
+    "output": "    *\n   * *\n  *   *\n *     *\n*       *\n *     *\n  *   *\n   * *\n    *",
     "verified": true
   },
   {
@@ -315,7 +315,7 @@
     "difficulty": "Advanced",
     "path": "patterns/star/pattern_29.py",
     "code": "def Pattern_Programs(n):\n    osp=1\n    insp=2*n-5\n    for i in range(1,n*2):\n        if i==1 or i==n*2-1:\n            print(\"* \"*n)\n        else:\n            if i==n:\n                print(\" \"*osp+\"*\")\n            else:\n                print(\" \"*osp+\"*\"+\" \"*insp+\"*\")\n            if i<n:\n                insp-=2\n                osp+=1\n            else:\n                insp+=2\n                osp-=1\n\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "* * * * * \n *     *\n  *   *\n   * *\n    *\n   * *\n  *   *\n *     *\n* * * * *",
+    "output": "* * * * * \n *     *\n  *   *\n   * *\n    *\n   * *\n  *   *\n *     *\n* * * * * ",
     "verified": true
   },
   {
@@ -359,7 +359,7 @@
     "difficulty": "Starter",
     "path": "patterns/star/pattern_33.py",
     "code": "def Pattern_Programs(n):\n    for i in range(1,n*2):\n        if i==n:\n            print(\"*\"*(n*2-1))\n        else:\n            print(\" \"*(n-1)+\"*\")\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "*\n    *\n    *\n    *\n*********\n    *\n    *\n    *\n    *",
+    "output": "    *\n    *\n    *\n    *\n*********\n    *\n    *\n    *\n    *",
     "verified": true
   },
   {
@@ -381,7 +381,7 @@
     "difficulty": "Starter",
     "path": "patterns/star/pattern_35.py",
     "code": "def Pattern_Programs(n):\n    for i in range(1,n+1):\n        if i%2==0:\n            print(\" \"+\"* \"*(n-3))\n        else:\n            print(\"* \"*(n-2))\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "* * * \n * * \n* * * \n * * \n* * *",
+    "output": "* * * \n * * \n* * * \n * * \n* * * ",
     "verified": true
   },
   {
@@ -447,7 +447,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/number/pattern_6.py",
     "code": "def Pattern_Programs(n):\n    osp=n-1\n    for i in range(1,n+1):\n        print(\" \"*osp,end=\"\")\n        for j in range(1,i+1):\n            print(j,end=\" \")\n        print()\n        osp-=1\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 \n   1 2 \n  1 2 3 \n 1 2 3 4 \n1 2 3 4 5",
+    "output": "    1 \n   1 2 \n  1 2 3 \n 1 2 3 4 \n1 2 3 4 5 ",
     "verified": true
   },
   {
@@ -513,7 +513,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/number/pattern_12.py",
     "code": "def Pattern_Programs(n):\n    hh=1\n    for i in range(1,n+1):\n        kk=hh\n        for j in range(i):\n            print(kk,end=\" \")\n            kk+=n\n        print()\n        hh+=1\n\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 \n2 7 \n3 8 13 \n4 9 14 19 \n5 10 15 20 25",
+    "output": "1 \n2 7 \n3 8 13 \n4 9 14 19 \n5 10 15 20 25 ",
     "verified": true
   },
   {
@@ -524,7 +524,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/number/pattern_13.py",
     "code": "def Pattern_Programs(n):\n\n    osp=n-1\n    for i in range(1,n+1):\n        print(\" \"*osp,end=\"\")\n        hh=1\n        for j in range(1,i+1):\n            print(hh,end=\" \")\n            hh=int(hh*(i-j)/j)\n        osp-=1\n        print()\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 \n   1 1 \n  1 2 1 \n 1 3 3 1 \n1 4 6 4 1",
+    "output": "    1 \n   1 1 \n  1 2 1 \n 1 3 3 1 \n1 4 6 4 1 ",
     "verified": true
   },
   {
@@ -546,7 +546,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/number/pattern_15.py",
     "code": "def Pattern_Programs(n):\n    hh=n+1\n    osp=0\n    for i in range(1,n+1):\n        print(\" \"*osp,end=\"\")\n        for j in range(1,hh):\n            print(j,end=\" \")\n        print()\n        hh-=1\n        osp+=1\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 2 3 4 5 \n 1 2 3 4 \n  1 2 3 \n   1 2 \n    1",
+    "output": "1 2 3 4 5 \n 1 2 3 4 \n  1 2 3 \n   1 2 \n    1 ",
     "verified": true
   },
   {
@@ -557,7 +557,7 @@
     "difficulty": "Advanced",
     "path": "patterns/number/pattern_16.py",
     "code": "def Pattern_Programs(n):\n    osp=n-1\n    hh=1\n    for i in range(1,n*2):\n        print(\" \"*osp,end=\"\")\n        for j in range(1,hh+1):\n            print(j,end=\" \")\n        print()\n        if i<n:\n            osp-=1\n            hh+=1\n        else:\n            osp+=1\n            hh-=1\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 \n   1 2 \n  1 2 3 \n 1 2 3 4 \n1 2 3 4 5 \n 1 2 3 4 \n  1 2 3 \n   1 2 \n    1",
+    "output": "    1 \n   1 2 \n  1 2 3 \n 1 2 3 4 \n1 2 3 4 5 \n 1 2 3 4 \n  1 2 3 \n   1 2 \n    1 ",
     "verified": true
   },
   {
@@ -579,7 +579,7 @@
     "difficulty": "Advanced",
     "path": "patterns/number/pattern_18.py",
     "code": "def Pattern_Programs(n):\n    hh=1\n    osp=0\n    for i in range(1,n*2):\n        print(\" \"*osp,end=\"\")\n        for j in range(hh,n+1):\n            print(j,end=\" \")\n        print()\n        if i<n:\n            hh+=1\n            osp+=1\n        else:\n            hh-=1\n            osp-=1\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 2 3 4 5 \n 2 3 4 5 \n  3 4 5 \n   4 5 \n    5 \n   4 5 \n  3 4 5 \n 2 3 4 5 \n1 2 3 4 5",
+    "output": "1 2 3 4 5 \n 2 3 4 5 \n  3 4 5 \n   4 5 \n    5 \n   4 5 \n  3 4 5 \n 2 3 4 5 \n1 2 3 4 5 ",
     "verified": true
   },
   {
@@ -590,7 +590,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/number/pattern_19.py",
     "code": "def Pattern_Programs(n):\n    hh=n\n    osp=n-1\n    for i in range(1,n+1):\n        print(\" \"*osp,end=\"\")\n        for j in range(hh,n+1):\n            print(j,end=\" \")\n        print()\n        hh-=1\n        osp-=1\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "5 \n   4 5 \n  3 4 5 \n 2 3 4 5 \n1 2 3 4 5",
+    "output": "    5 \n   4 5 \n  3 4 5 \n 2 3 4 5 \n1 2 3 4 5 ",
     "verified": true
   },
   {
@@ -601,7 +601,7 @@
     "difficulty": "Advanced",
     "path": "patterns/number/pattern_20.py",
     "code": "def Pattern_Programs(n):\n    hh=1\n    osp=n-1\n    for i in range(1,n+1):\n        print(\" \"*osp,end=\"\")\n        for j in range(1,hh+1):\n            print(j,end=\"\")\n        for k in range(hh-1,0,-1):\n            print(k,end=\"\")\n        print()\n        hh+=1\n        osp-=1\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1\n   121\n  12321\n 1234321\n123454321",
+    "output": "    1\n   121\n  12321\n 1234321\n123454321",
     "verified": true
   },
   {
@@ -612,7 +612,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/number/pattern_21.py",
     "code": "def Pattern_Programs(n):\n    for i in range(1,n+1):\n        temp=1\n        for j in range(i):\n            print(temp,end=\" \")\n            if temp==1:\n                temp=0\n            else:\n                temp=1\n        print()\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 \n1 0 \n1 0 1 \n1 0 1 0 \n1 0 1 0 1",
+    "output": "1 \n1 0 \n1 0 1 \n1 0 1 0 \n1 0 1 0 1 ",
     "verified": true
   },
   {
@@ -656,7 +656,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/number/pattern_25.py",
     "code": "def Pattern_Programs(n):\n    osp=n-1\n    for i in range(1,n+1):\n        print(\" \"*osp,end=\"\")\n        for j in range(i):\n            print(i,end=\" \")\n        print()\n        osp-=1\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 \n   2 2 \n  3 3 3 \n 4 4 4 4 \n5 5 5 5 5",
+    "output": "    1 \n   2 2 \n  3 3 3 \n 4 4 4 4 \n5 5 5 5 5 ",
     "verified": true
   },
   {
@@ -678,7 +678,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/number/pattern_27.py",
     "code": "def Pattern_Programs(n):\n    for i in range(1,n+1):\n        temp=i\n        for j in range(1,i+1):\n            print(temp,end=\" \")\n            temp+=n-j\n        print()\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 \n2 6 \n3 7 10 \n4 8 11 13 \n5 9 12 14 15",
+    "output": "1 \n2 6 \n3 7 10 \n4 8 11 13 \n5 9 12 14 15 ",
     "verified": true
   },
   {
@@ -689,7 +689,7 @@
     "difficulty": "Advanced",
     "path": "patterns/number/pattern_28.py",
     "code": "def Pattern_Programs(n):\n    star=1\n    for i in range(1,n*2):\n        temp=i\n        for j in range(star):\n            print(temp,end=\" \")\n            temp+=i\n        print()\n        if i<n:\n            star+=1\n        else:\n            star-=1\n\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 \n2 4 \n3 6 9 \n4 8 12 16 \n5 10 15 20 25 \n6 12 18 24 \n7 14 21 \n8 16 \n9",
+    "output": "1 \n2 4 \n3 6 9 \n4 8 12 16 \n5 10 15 20 25 \n6 12 18 24 \n7 14 21 \n8 16 \n9 ",
     "verified": true
   },
   {
@@ -755,7 +755,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/number/pattern_34.py",
     "code": "def Pattern_Programs(n):\n    spoint=1\n    epoint=0\n    for i in range(1,n+1):\n        for j in range(spoint,n+1):\n            print(j,end=\" \")\n        for k in range(1,epoint+1):\n            print(k,end=\" \")\n        print()\n        spoint+=1\n        epoint+=1\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 2 3 4 5 \n2 3 4 5 1 \n3 4 5 1 2 \n4 5 1 2 3 \n5 1 2 3 4",
+    "output": "1 2 3 4 5 \n2 3 4 5 1 \n3 4 5 1 2 \n4 5 1 2 3 \n5 1 2 3 4 ",
     "verified": true
   },
   {
@@ -766,7 +766,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/number/pattern_35.py",
     "code": "def Pattern_Programs(n):\n    spoint=1\n    epoint=0\n    for i in range(1,n+1):\n        for j in range(spoint,n+1):\n            print(j,end=\" \")\n        for k in range(epoint,0,-1):\n            print(k,end=\" \")\n        print()\n        spoint+=1\n        epoint+=1\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 2 3 4 5 \n2 3 4 5 1 \n3 4 5 2 1 \n4 5 3 2 1 \n5 4 3 2 1",
+    "output": "1 2 3 4 5 \n2 3 4 5 1 \n3 4 5 2 1 \n4 5 3 2 1 \n5 4 3 2 1 ",
     "verified": true
   },
   {
@@ -777,7 +777,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/number/pattern_36.py",
     "code": "def Pattern_Programs(n):\n    spoint=1\n    epoint=0\n    for i in range(1,n+1):\n        for j in range(spoint,n*2,2):\n            print(j,end=\" \")\n        for k in range(1,epoint+1,2):\n            print(k,end=\" \")\n        print()\n        spoint+=2\n        epoint+=2\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 3 5 7 9 \n3 5 7 9 1 \n5 7 9 1 3 \n7 9 1 3 5 \n9 1 3 5 7",
+    "output": "1 3 5 7 9 \n3 5 7 9 1 \n5 7 9 1 3 \n7 9 1 3 5 \n9 1 3 5 7 ",
     "verified": true
   },
   {
@@ -788,7 +788,7 @@
     "difficulty": "Intermediate",
     "path": "patterns/number/pattern_37.py",
     "code": "def Pattern_Programs(n):\n    spoint=1\n    epoint=-1\n    for i in range(1,n+1):\n        for j in range(spoint,n*2,2):\n            print(j,end=\" \")\n        for k in range(epoint,0,-2):\n            print(k,end=\" \")\n        print()\n        spoint+=2\n        epoint+=2\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 3 5 7 9 \n3 5 7 9 1 \n5 7 9 3 1 \n7 9 5 3 1 \n9 7 5 3 1",
+    "output": "1 3 5 7 9 \n3 5 7 9 1 \n5 7 9 3 1 \n7 9 5 3 1 \n9 7 5 3 1 ",
     "verified": true
   },
   {
@@ -810,7 +810,7 @@
     "difficulty": "Advanced",
     "path": "patterns/number/pattern_39.py",
     "code": "def Pattern_Programs(n):\n    counter=1\n    for i in range(1,n+1):\n        if i%2!=0:\n            for j in range(i):\n                print(counter,end=\" \")\n                counter+=1\n        else:\n            kk=counter+i-1\n            for j in range(i):\n                print(kk,end=\" \")\n                kk-=1\n                counter+=1\n\n        print()\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 \n3 2 \n4 5 6 \n10 9 8 7 \n11 12 13 14 15",
+    "output": "1 \n3 2 \n4 5 6 \n10 9 8 7 \n11 12 13 14 15 ",
     "verified": true
   },
   {
@@ -821,7 +821,7 @@
     "difficulty": "Advanced",
     "path": "patterns/number/pattern_40.py",
     "code": "def Pattern_Programs(n):\n    counter=1\n    for i in range(1,n+1):\n        if i%2==0:\n            for j in range(i):\n                print(counter,end=\" \")\n                counter+=1\n        else:\n            kk=counter+i-1\n            for j in range(i):\n                print(kk,end=\" \")\n                kk-=1\n                counter+=1\n\n        print()\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 \n2 3 \n6 5 4 \n7 8 9 10 \n15 14 13 12 11",
+    "output": "1 \n2 3 \n6 5 4 \n7 8 9 10 \n15 14 13 12 11 ",
     "verified": true
   },
   {
@@ -865,7 +865,7 @@
     "difficulty": "Advanced",
     "path": "patterns/number/pattern_44.py",
     "code": "def Pattern_Programs(n):\n    temp=1\n    for i in range(1,n*2):\n        count=temp\n        for j in range(temp):\n            print(count,end=\" \")\n            count+=1\n\n        for k in range(count-2,temp-1,-1):\n            print(k,end=\" \")\n        print()\n        if i<n:\n            temp+=1\n        else:\n            temp-=1\n\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 \n2 3 2 \n3 4 5 4 3 \n4 5 6 7 6 5 4 \n5 6 7 8 9 8 7 6 5 \n4 5 6 7 6 5 4 \n3 4 5 4 3 \n2 3 2 \n1",
+    "output": "1 \n2 3 2 \n3 4 5 4 3 \n4 5 6 7 6 5 4 \n5 6 7 8 9 8 7 6 5 \n4 5 6 7 6 5 4 \n3 4 5 4 3 \n2 3 2 \n1 ",
     "verified": true
   },
   {
@@ -887,7 +887,7 @@
     "difficulty": "Advanced",
     "path": "patterns/number/pattern_46.py",
     "code": "def Pattern_Programs(n):\n    temp=1\n    for i in range(1,n*2):\n        for j in range(temp,0,-1):\n            print(j,end=\" \")\n\n        for k in range(2,temp+1):\n            print(k,end=\" \")\n        print()\n        if i<n:\n            temp+=1\n        else:\n            temp-=1\n\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1 \n2 1 2 \n3 2 1 2 3 \n4 3 2 1 2 3 4 \n5 4 3 2 1 2 3 4 5 \n4 3 2 1 2 3 4 \n3 2 1 2 3 \n2 1 2 \n1",
+    "output": "1 \n2 1 2 \n3 2 1 2 3 \n4 3 2 1 2 3 4 \n5 4 3 2 1 2 3 4 5 \n4 3 2 1 2 3 4 \n3 2 1 2 3 \n2 1 2 \n1 ",
     "verified": true
   },
   {
@@ -898,7 +898,7 @@
     "difficulty": "Advanced",
     "path": "patterns/number/pattern_47.py",
     "code": "def Pattern_Programs(n):\n    space=n-1\n    for i in range(1,n*2,2):\n        print(\" \"*space,end=\"\")\n        temp=1\n        for j in range(1,i+1):\n            print(temp,end=\"\")\n            if j<=i//2:\n                temp+=1\n            else:\n                temp-=1\n        space-=1\n        print()\n\n\n\nif __name__ == '__main__':\n    Pattern_Programs(int(input()))",
-    "output": "1\n   121\n  12321\n 1234321\n123454321",
+    "output": "    1\n   121\n  12321\n 1234321\n123454321",
     "verified": true
   },
   {
