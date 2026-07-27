@@ -1,208 +1,269 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Pattern World is an interactive collection of 83 Python star and number pattern programs, created as a university curriculum project by Dhruvi Turakhia."
+    />
+    <meta name="theme-color" content="#10172a" />
+    <meta property="og:title" content="Pattern World — Learn Python through patterns" />
+    <meta
+      property="og:description"
+      content="Explore 83 runnable Python examples covering nested loops, conditions, sequences, and output formatting."
+    />
+    <meta property="og:type" content="website" />
+    <title>Pattern World — Python Pattern Explorer</title>
+    <link rel="icon" href="./1.PNG" type="image/png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#explorer">Skip to pattern explorer</a>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pattern World</title>
-    <link rel="shortcut icon" href="1.PNG">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
-
-</head>
-
-<body>
-    <header>
-
-        <div id="menu-bar" class="fas fa-bars"></div>
-
-        <a href="#" class="logo"><span>P</span>attern World</a>
-
-        <nav class="navbar">
-            <a href="star.html">Star</a>
-            <a href="number.html">Number</a>
-            <a href="#Alphabet">Alphabet</a>
-            <a href="#Diamond">Diamond</a>
-            <a href="#Other">Other</a>
-            <!-- <a href="#review">review</a>
-            <a href="#contact">contact</a> -->
-        </nav>
-
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Pattern World home">
+        <span class="brand-mark" aria-hidden="true">∴</span>
+        <span>Pattern World</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#explorer">Explore</a>
+        <a href="#about">About</a>
+        <a
+          class="github-link"
+          href="https://github.com/DhruviTurakhia/Pattern-World"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
     </header>
 
-    <section class="home" id="home">
-        <div class="animation-area">
-            <ul class="box-area">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        <div class="content">
-            <h3>Welcome to world of PATTERNS!!</h3>
-            <p>You can find here variety of different patterns in C, Python or Java language.</p>
-        </div>
-    </section>
-    <section class="gallery" id="gallery">
-
-        <h1 id="heading1" class="heading">
-            <span>s</span>
-            <span>t</span>
-            <span>a</span>
-            <span>r</span>
-            <!-- <span>o</span>
-            <span>r</span>
-            <span>e</span> -->
-        </h1>
-
-        <div class="box-container">
-            <div class="box">
-                <img src="images\Star\11.PNG" alt="">
-                <div class="content">
-                    <h3>Star Triangle Pattern 1</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/star_patten/pattern_1.py"
-                        target="_blank" class="btn">see more</a>
-                </div>
+    <main>
+      <section class="hero page-shell" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Python curriculum project · Rebuilt for the web</p>
+          <h1><span>83 ways</span> to think in loops.</h1>
+          <p class="hero-summary">
+            An interactive library of star and number patterns for learning Python fundamentals:
+            nested loops, conditions, sequences, and output formatting.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#explorer">Explore patterns</a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/DhruviTurakhia/Pattern-World/tree/master/patterns"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Browse Python files
+            </a>
+          </div>
+          <dl class="hero-metrics" aria-label="Project statistics">
+            <div>
+              <dt>83</dt>
+              <dd>Python examples</dd>
             </div>
-            <div class="box">
-                <img src="images\Star\12.PNG" alt="">
-                <div class="content">
-                    <h3>Star Triangle Pattern 2</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/star_patten/pattern_2.py"
-                        target="_blank" class="btn">see more</a>
-                </div>
+            <div>
+              <dt>2</dt>
+              <dd>pattern collections</dd>
             </div>
-            <div class="box">
-                <img src="images\Star\13.PNG" alt="">
-                <div class="content">
-                    <h3>Star Triangle Pattern 3</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/star_patten/pattern_3.py"
-                        target="_blank" class="btn">see more</a>
-                </div>
+            <div>
+              <dt>100%</dt>
+              <dd>verified outputs</dd>
             </div>
-            <div class="box">
-                <img src="images\Star\14.PNG" alt="">
-                <div class="content">
-                    <h3>Star Triangle Pattern 4</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/star_patten/pattern_4.py"
-                        target="_blank" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images\Star\15.PNG" alt="">
-                <div class="content">
-                    <h3>Number Triangle Pattern 5</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/star_patten/pattern_5.py"
-                        target="_blank" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images\Star\16.PNG" alt="">
-                <div class="content">
-                    <h3>Number Triangle Pattern 6</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/star_patten/pattern_6.py"
-                        target="_blank" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images\Star\17.PNG" alt="">
-                <div class="content">
-                    <h3>Number Triangle Pattern 7</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/star_patten/pattern_7.py"
-                        target="_blank" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images\Star\18.PNG" alt="">
-                <div class="content">
-                    <h3>Number Triangle Pattern 8</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/star_patten/pattern_8.py"
-                        target="_blank" class="btn">see more</a>
-                </div>
-            </div>
-            <a href="star.html" class="btn">explore more</a>
-
+          </dl>
         </div>
 
-    </section>
-    <section class="gallery" id="gallery">
-
-        <h1 id="heading2" class="heading">
-            <span>n</span>
-            <span>u</span>
-            <span>m</span>
-            <span>b</span>
-            <span>e</span>
-            <span>r</span>
-            <!-- <span>e</span> -->
-        </h1>
-
-        <div class="box-container">
-            <div class="box">
-                <img src="images\Number\1.PNG" alt="">
-                <div class="content">
-                    <h3>Number Triangle Pattern 1</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/number_pattern/pattern_1.py" target="_blank" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images\Number\2.PNG" alt="">
-                <div class="content">
-                    <h3>Number Triangle Pattern 2</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/number_pattern/pattern_2.py" target="_blank" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images\Number\3.PNG" alt="">
-                <div class="content">
-                    <h3>Number Triangle Pattern 3</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/number_pattern/pattern_3.py" target="_blank" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images\Number\4.PNG" alt="">
-                <div class="content">
-                    <h3>Number Triangle Pattern 4</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/number_pattern/pattern_4.py" target="_blank" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images\Number\5.PNG" alt="">
-                <div class="content">
-                    <h3>Number Triangle Pattern 5</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/number_pattern/pattern_5.py" target="_blank" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images\Number\6.PNG" alt="">
-                <div class="content">
-                    <h3>Number Triangle Pattern 6</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/number_pattern/pattern_6.py" target="_blank" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images\Number\7.PNG" alt="">
-                <div class="content">
-                    <h3>Number Triangle Pattern 7</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/number_pattern/pattern_7.py" target="_blank" class="btn">see more</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="images\Number\8.PNG" alt="">
-                <div class="content">
-                    <h3>Number Triangle Pattern 8</h3>
-                    <a href="https://github.com/DhruviTurakhia/Python-patterns/blob/master/number_pattern/pattern_8.py" target="_blank" class="btn">see more</a>
-                </div>
-            </div>
+        <div class="hero-visual" aria-label="Python pattern output example">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+            <p>pattern_world.py</p>
+          </div>
+          <div class="visual-body">
+            <div class="line-numbers" aria-hidden="true">1<br />2<br />3<br />4<br />5<br />6</div>
+            <pre><code><span class="code-keyword">for</span> row <span class="code-keyword">in</span> <span class="code-call">range</span>(<span class="code-number">1</span>, <span class="code-number">6</span>):
+    <span class="code-call">print</span>(<span class="code-string">"* "</span> * row)</code></pre>
+          </div>
+          <div class="visual-output">
+            <p>Output</p>
+            <pre aria-hidden="true">*
+* *
+* * *
+* * * *
+* * * * *</pre>
+          </div>
         </div>
-        <a href="number.html" class="btn">explore more</a>
+      </section>
 
-    </section>
+      <section class="explorer page-shell" id="explorer">
+        <div class="section-heading">
+          <p class="eyebrow">Pattern explorer</p>
+          <h2>Find a pattern. Read it. Run it.</h2>
+          <p>
+            Search the full collection, filter by type, and open any example to compare its Python
+            code with the generated output.
+          </p>
+        </div>
 
-</body>
+        <div class="toolbar" aria-label="Pattern filters">
+          <label class="search-field">
+            <span class="sr-only">Search patterns</span>
+            <span aria-hidden="true">⌕</span>
+            <input
+              type="search"
+              placeholder="Search by number, type, or difficulty"
+              autocomplete="off"
+              data-search
+            />
+          </label>
 
+          <div class="filter-group" aria-label="Filter by pattern type">
+            <button class="filter-button is-active" type="button" data-category="all">All</button>
+            <button class="filter-button" type="button" data-category="star">Star</button>
+            <button class="filter-button" type="button" data-category="number">Number</button>
+          </div>
+
+          <label class="select-field">
+            <span class="sr-only">Filter by difficulty</span>
+            <select data-difficulty>
+              <option value="all">Any difficulty</option>
+              <option value="Starter">Starter</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="results-meta" aria-live="polite">
+          <p><strong data-result-count>0</strong> examples</p>
+          <p>Input used for preview: <code>5</code></p>
+        </div>
+
+        <div class="pattern-grid" data-pattern-grid>
+          <div class="loading-card">Loading the pattern library…</div>
+        </div>
+
+        <div class="load-more-wrap">
+          <button class="button button-secondary" type="button" data-load-more hidden>
+            Load more patterns
+          </button>
+        </div>
+      </section>
+
+      <section class="learning page-shell" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">Why this project exists</p>
+          <h2>A university exercise, turned into one complete learning resource.</h2>
+        </div>
+        <div class="learning-grid">
+          <article>
+            <span>01</span>
+            <h3>Build loop intuition</h3>
+            <p>
+              Pattern programs make iteration visible. Each line of output shows how row and column
+              conditions affect a result.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Compare approaches</h3>
+            <p>
+              The collection moves from direct repetition to nested loops, spacing logic, numeric
+              sequences, and conditional output.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Keep the original work useful</h3>
+            <p>
+              Two early repositories are now combined into one responsive website and one organized
+              Python source library.
+            </p>
+          </article>
+        </div>
+
+        <div class="project-note">
+          <div>
+            <p class="eyebrow">Project context</p>
+            <h3>Created by Dhruvi Turakhia</h3>
+          </div>
+          <p>
+            Pattern World began as a university curriculum project in 2021. The original Python
+            exercises are preserved, while the web experience and repository structure have been
+            rebuilt to make the collection easier to browse, understand, and share.
+          </p>
+          <a
+            href="https://github.com/DhruviTurakhia/Pattern-World"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View repository <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-shell">
+      <p>Pattern World · A Python learning project by Dhruvi Turakhia</p>
+      <a href="https://github.com/DhruviTurakhia" target="_blank" rel="noreferrer">
+        More on GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </footer>
+
+    <dialog class="code-dialog" data-dialog>
+      <div class="dialog-header">
+        <div>
+          <p class="dialog-kicker" data-dialog-category></p>
+          <h2 data-dialog-title>Pattern</h2>
+        </div>
+        <button class="icon-button" type="button" aria-label="Close code viewer" data-close-dialog>
+          ×
+        </button>
+      </div>
+
+      <div class="dialog-tabs" role="tablist" aria-label="Pattern detail">
+        <button
+          class="dialog-tab is-active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          data-tab="code"
+        >
+          Python
+        </button>
+        <button
+          class="dialog-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-tab="output"
+        >
+          Output
+        </button>
+      </div>
+
+      <div class="dialog-panel is-active" role="tabpanel" data-panel="code">
+        <pre><code data-dialog-code></code></pre>
+      </div>
+      <div class="dialog-panel output-panel" role="tabpanel" data-panel="output">
+        <pre data-dialog-output></pre>
+      </div>
+
+      <div class="dialog-actions">
+        <button class="button button-primary" type="button" data-copy-code>Copy Python code</button>
+        <a
+          class="button button-secondary"
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          data-source-link
+        >
+          Open source file
+        </a>
+      </div>
+    </dialog>
+  </body>
 </html>
