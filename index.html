@@ -5,33 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Pattern World is an interactive collection of 83 Python star and number pattern programs, created as a university curriculum project by Dhruvi Turakhia."
+      content="Pattern World is a visual Python interview atlas. Learn algorithms, low-level design, and system design from first principles with simple explanations, pseudocode, Python, and interactive visualizations."
     />
-    <meta name="theme-color" content="#10172a" />
-    <meta property="og:title" content="Pattern World — Learn Python through patterns" />
+    <meta name="theme-color" content="#f4f1e8" />
+    <meta property="og:title" content="Pattern World — From first loop to system design" />
     <meta
       property="og:description"
-      content="Explore 83 runnable Python examples covering nested loops, conditions, sequences, and output formatting."
+      content="A visual, beginner-friendly path through Python interview concepts: algorithms, object design, and scalable systems."
     />
     <meta property="og:type" content="website" />
-    <title>Pattern World — Python Pattern Explorer</title>
+    <meta property="og:url" content="https://dhruviturakhia.github.io/Pattern-World/" />
+    <meta
+      property="og:image"
+      content="https://dhruviturakhia.github.io/Pattern-World/og.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Pattern World — From your first loop to system design."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Pattern World — The Visual Python Interview Atlas</title>
     <link rel="icon" href="./1.PNG" type="image/png" />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./curriculum-data.js" defer></script>
     <script src="./app.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#explorer">Skip to pattern explorer</a>
+    <a class="skip-link" href="#main">Skip to learning content</a>
+    <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
 
-    <header class="site-header">
+    <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Pattern World home">
-        <span class="brand-mark" aria-hidden="true">∴</span>
-        <span>Pattern World</span>
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-copy">
+          <strong>Pattern World</strong>
+          <small>Visual interview atlas</small>
+        </span>
       </a>
-      <nav aria-label="Main navigation">
-        <a href="#explorer">Explore</a>
-        <a href="#about">About</a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        aria-label="Open navigation"
+        data-nav-toggle
+      >
+        <span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation" data-nav>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#learn">Concepts</a>
+        <a href="#visualizer">Visual lab</a>
+        <a href="#patterns">Patterns</a>
         <a
-          class="github-link"
+          class="nav-github"
           href="https://github.com/DhruviTurakhia/Pattern-World"
           target="_blank"
           rel="noreferrer"
@@ -41,227 +70,546 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main">
       <section class="hero page-shell" id="top">
         <div class="hero-copy">
-          <p class="eyebrow">Python curriculum project · Rebuilt for the web</p>
-          <h1><span>83 ways</span> to think in loops.</h1>
+          <p class="eyebrow"><span></span> Python interview prep, explained visually</p>
+          <h1>From your first loop to the systems behind <em>millions.</em></h1>
           <p class="hero-summary">
-            An interactive library of star and number patterns for learning Python fundamentals:
-            nested loops, conditions, sequences, and output formatting.
+            Learn the concepts interview questions are built from. No problem lists, no code runner,
+            and no memorized answers—just clear intuition, visual algorithms, pseudocode, and simple
+            Python.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#explorer">Explore patterns</a>
-            <a
-              class="button button-secondary"
-              href="https://github.com/DhruviTurakhia/Pattern-World/tree/master/patterns"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Browse Python files
+            <a class="button button-primary" href="#roadmap">
+              Start the roadmap <span aria-hidden="true">↓</span>
             </a>
+            <a class="button button-secondary" href="#visualizer">Open the visual lab</a>
           </div>
-          <dl class="hero-metrics" aria-label="Project statistics">
-            <div>
-              <dt>83</dt>
-              <dd>Python examples</dd>
-            </div>
-            <div>
-              <dt>2</dt>
-              <dd>pattern collections</dd>
-            </div>
-            <div>
-              <dt>100%</dt>
-              <dd>verified outputs</dd>
-            </div>
-          </dl>
+          <ul class="hero-principles" aria-label="Learning principles">
+            <li><span aria-hidden="true">✓</span> Learn in order</li>
+            <li><span aria-hidden="true">✓</span> See every step</li>
+            <li><span aria-hidden="true">✓</span> Read simple Python</li>
+          </ul>
         </div>
 
-        <div class="hero-visual" aria-label="Python pattern output example">
-          <div class="window-bar">
-            <span></span><span></span><span></span>
-            <p>pattern_world.py</p>
+        <div class="hero-map" aria-label="Learning path from patterns to scalable systems">
+          <div class="map-topline">
+            <span>YOUR LEARNING PATH</span>
+            <span>43 CONCEPTS · 3 TRACKS</span>
           </div>
-          <div class="visual-body">
-            <div class="line-numbers" aria-hidden="true">1<br />2<br />3<br />4<br />5<br />6</div>
-            <pre><code><span class="code-keyword">for</span> row <span class="code-keyword">in</span> <span class="code-call">range</span>(<span class="code-number">1</span>, <span class="code-number">6</span>):
-    <span class="code-call">print</span>(<span class="code-string">"* "</span> * row)</code></pre>
+          <div class="map-stage map-stage-one">
+            <div class="map-index">01</div>
+            <div class="map-stage-copy">
+              <p>FOUNDATIONS</p>
+              <h2>Make logic visible</h2>
+              <span>loops · arrays · patterns</span>
+            </div>
+            <div class="mini-pattern" aria-hidden="true">
+              <i></i>
+              <i></i><i></i>
+              <i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+            </div>
           </div>
-          <div class="visual-output">
-            <p>Output</p>
-            <pre aria-hidden="true">*
-* *
-* * *
-* * * *
-* * * * *</pre>
+          <div class="map-connector" aria-hidden="true"><i></i><span>then</span><i></i></div>
+          <div class="map-stage map-stage-two">
+            <div class="map-index">02</div>
+            <div class="map-stage-copy">
+              <p>ALGORITHMS + DESIGN</p>
+              <h2>Organize the solution</h2>
+              <span>data structures · objects · patterns</span>
+            </div>
+            <div class="mini-bars" aria-hidden="true">
+              <i style="--height: 46%"></i>
+              <i style="--height: 76%"></i>
+              <i style="--height: 32%"></i>
+              <i style="--height: 94%"></i>
+              <i style="--height: 61%"></i>
+            </div>
+          </div>
+          <div class="map-connector" aria-hidden="true"><i></i><span>scale</span><i></i></div>
+          <div class="map-stage map-stage-three">
+            <div class="map-index">03</div>
+            <div class="map-stage-copy">
+              <p>SYSTEMS</p>
+              <h2>Connect the pieces</h2>
+              <span>services · data · reliability</span>
+            </div>
+            <div class="mini-system" aria-hidden="true">
+              <i class="system-client">C</i><b></b><i>LB</i><b></b>
+              <span><i>API</i><i>API</i></span><b></b><i>DB</i>
+            </div>
+          </div>
+          <p class="map-note">
+            <span aria-hidden="true">◎</span>
+            One connected mental model—not isolated interview answers.
+          </p>
+        </div>
+      </section>
+
+      <div class="scope-strip" aria-label="Course scope">
+        <div class="scope-track">
+          <span>83 Python patterns</span><i>•</i>
+          <span>16 algorithm concepts</span><i>•</i>
+          <span>12 code design concepts</span><i>•</i>
+          <span>15 system design concepts</span><i>•</i>
+          <span>4 interactive visual labs</span><i>•</i>
+          <span>83 Python patterns</span><i>•</i>
+          <span>16 algorithm concepts</span><i>•</i>
+          <span>12 code design concepts</span><i>•</i>
+          <span>15 system design concepts</span><i>•</i>
+          <span>4 interactive visual labs</span><i>•</i>
+        </div>
+      </div>
+
+      <section class="roadmap-section section-space" id="roadmap">
+        <div class="page-shell">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow"><span></span> The complete path</p>
+              <h2>Three levels of thinking.<br />One place to learn them.</h2>
+            </div>
+            <p>
+              Start with the shape of a loop, learn how to choose and organize a solution, then zoom
+              out to the architecture that keeps real products running.
+            </p>
+          </div>
+
+          <div class="track-grid" data-track-grid>
+            <button class="track-card track-violet" type="button" data-roadmap-track="dsa">
+              <span class="track-number">01</span>
+              <span class="track-meta">16 concepts · basic to advanced</span>
+              <span class="track-icon" aria-hidden="true">
+                <i></i><i></i><i></i><i></i>
+              </span>
+              <strong>Algorithms</strong>
+              <span class="track-label">Data structures &amp; algorithms</span>
+              <span class="track-description">
+                Patterns, complexity, arrays, sorting, trees, graphs, greedy thinking, and dynamic
+                programming.
+              </span>
+              <span class="track-link">Explore this track <b aria-hidden="true">→</b></span>
+            </button>
+
+            <button class="track-card track-coral" type="button" data-roadmap-track="lld">
+              <span class="track-number">02</span>
+              <span class="track-meta">12 concepts · Python-first</span>
+              <span class="track-icon track-icon-objects" aria-hidden="true">
+                <i>A</i><b></b><i>B</i><b></b><i>C</i>
+              </span>
+              <strong>Code design</strong>
+              <span class="track-label">Python &amp; low-level design</span>
+              <span class="track-description">
+                Classes, relationships, SOLID, UML, reusable design patterns, and concurrency.
+              </span>
+              <span class="track-link">Explore this track <b aria-hidden="true">→</b></span>
+            </button>
+
+            <button class="track-card track-mint" type="button" data-roadmap-track="system">
+              <span class="track-number">03</span>
+              <span class="track-meta">15 concepts · architecture</span>
+              <span class="track-icon track-icon-system" aria-hidden="true">
+                <i></i><b></b><i></i><b></b><i></i>
+              </span>
+              <strong>System design</strong>
+              <span class="track-label">Scalable architecture</span>
+              <span class="track-description">
+                Requests, load balancers, APIs, databases, caches, queues, consistency, and
+                reliability.
+              </span>
+              <span class="track-link">Explore this track <b aria-hidden="true">→</b></span>
+            </button>
           </div>
         </div>
       </section>
 
-      <section class="explorer page-shell" id="explorer">
-        <div class="section-heading">
-          <p class="eyebrow">Pattern explorer</p>
-          <h2>Find a pattern. Read it. Run it.</h2>
-          <p>
-            Search the full collection, filter by type, and open any example to compare its Python
-            code with the generated output.
-          </p>
-        </div>
-
-        <div class="toolbar" aria-label="Pattern filters">
-          <label class="search-field">
-            <span class="sr-only">Search patterns</span>
-            <span aria-hidden="true">⌕</span>
-            <input
-              type="search"
-              placeholder="Search by number, type, or difficulty"
-              autocomplete="off"
-              data-search
-            />
-          </label>
-
-          <div class="filter-group" aria-label="Filter by pattern type">
-            <button class="filter-button is-active" type="button" data-category="all">All</button>
-            <button class="filter-button" type="button" data-category="star">Star</button>
-            <button class="filter-button" type="button" data-category="number">Number</button>
+      <section class="concept-section section-space" id="learn">
+        <div class="page-shell">
+          <div class="section-heading split-heading concept-heading">
+            <div>
+              <p class="eyebrow"><span></span> Concept atlas</p>
+              <h2>Learn the idea before<br />you meet the question.</h2>
+            </div>
+            <p>
+              Every guide answers the same four things: what it is, how to recognize it, the steps
+              behind it, and the simplest Python version worth remembering.
+            </p>
           </div>
 
-          <label class="select-field">
-            <span class="sr-only">Filter by difficulty</span>
-            <select data-difficulty>
-              <option value="all">Any difficulty</option>
-              <option value="Starter">Starter</option>
-              <option value="Intermediate">Intermediate</option>
-              <option value="Advanced">Advanced</option>
-            </select>
-          </label>
-        </div>
+          <div class="atlas-shell">
+            <div class="atlas-controls">
+              <div class="atlas-tabs" role="tablist" aria-label="Filter concepts by track">
+                <button class="atlas-tab is-active" type="button" data-track-filter="all">
+                  All <span>43</span>
+                </button>
+                <button class="atlas-tab" type="button" data-track-filter="dsa">
+                  Algorithms <span>16</span>
+                </button>
+                <button class="atlas-tab" type="button" data-track-filter="lld">
+                  Code design <span>12</span>
+                </button>
+                <button class="atlas-tab" type="button" data-track-filter="system">
+                  Systems <span>15</span>
+                </button>
+              </div>
 
-        <div class="results-meta" aria-live="polite">
-          <p><strong data-result-count>0</strong> examples</p>
-          <p>Input used for preview: <code>5</code></p>
-        </div>
+              <div class="atlas-tools">
+                <label class="search-field">
+                  <span aria-hidden="true">⌕</span>
+                  <span class="sr-only">Search concepts</span>
+                  <input
+                    type="search"
+                    placeholder="Search a concept"
+                    autocomplete="off"
+                    data-concept-search
+                  />
+                </label>
+                <label class="select-field">
+                  <span class="sr-only">Filter concepts by level</span>
+                  <select data-level-filter>
+                    <option value="all">Every level</option>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                  </select>
+                </label>
+              </div>
+            </div>
 
-        <div class="pattern-grid" data-pattern-grid>
-          <div class="loading-card">Loading the pattern library…</div>
-        </div>
+            <div class="atlas-results-line" aria-live="polite">
+              <p><strong data-concept-count>43</strong> concepts in this view</p>
+              <p><span aria-hidden="true">↗</span> Select a card for the full explanation</p>
+            </div>
 
-        <div class="load-more-wrap">
-          <button class="button button-secondary" type="button" data-load-more hidden>
-            Load more patterns
-          </button>
+            <div class="concept-grid" data-concept-grid></div>
+            <div class="load-more-wrap">
+              <button class="button button-secondary" type="button" data-concept-load-more hidden>
+                Show more concepts
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="learning page-shell" id="about">
-        <div class="section-heading">
-          <p class="eyebrow">Why this project exists</p>
-          <h2>A university exercise, turned into one complete learning resource.</h2>
-        </div>
-        <div class="learning-grid">
-          <article>
-            <span>01</span>
-            <h3>Build loop intuition</h3>
+      <section class="lab-section section-space" id="visualizer">
+        <div class="page-shell">
+          <div class="section-heading lab-heading">
+            <p class="eyebrow light"><span></span> Interactive visual lab</p>
+            <h2>Don’t memorize the steps.<br /><em>Watch the state change.</em></h2>
             <p>
-              Pattern programs make iteration visible. Each line of output shows how row and column
-              conditions affect a result.
+              Move one step at a time, connect the highlighted data to the highlighted pseudocode,
+              and say out loud what the algorithm knows now.
             </p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Compare approaches</h3>
-            <p>
-              The collection moves from direct repetition to nested loops, spacing logic, numeric
-              sequences, and conditional output.
-            </p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Keep the original work useful</h3>
-            <p>
-              Two early repositories are now combined into one responsive website and one organized
-              Python source library.
-            </p>
-          </article>
-        </div>
-
-        <div class="project-note">
-          <div>
-            <p class="eyebrow">Project context</p>
-            <h3>Created by Dhruvi Turakhia</h3>
           </div>
-          <p>
-            Pattern World began as a university curriculum project in 2021. The original Python
-            exercises are preserved, while the web experience and repository structure have been
-            rebuilt to make the collection easier to browse, understand, and share.
-          </p>
-          <a
-            href="https://github.com/DhruviTurakhia/Pattern-World"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View repository <span aria-hidden="true">↗</span>
-          </a>
+
+          <div class="lab-window">
+            <div class="lab-sidebar">
+              <p class="lab-sidebar-label">VISUALIZATIONS</p>
+              <div class="lab-tabs" role="tablist" aria-label="Choose an algorithm visualization">
+                <button class="lab-tab is-active" type="button" data-lab="sort">
+                  <span class="lab-tab-icon" aria-hidden="true">▥</span>
+                  <span><strong>Bubble sort</strong><small>Compare &amp; swap</small></span>
+                  <i>Basic</i>
+                </button>
+                <button class="lab-tab" type="button" data-lab="search">
+                  <span class="lab-tab-icon" aria-hidden="true">⌕</span>
+                  <span><strong>Binary search</strong><small>Discard half</small></span>
+                  <i>Basic</i>
+                </button>
+                <button class="lab-tab" type="button" data-lab="graph">
+                  <span class="lab-tab-icon" aria-hidden="true">⌘</span>
+                  <span><strong>Breadth-first search</strong><small>Explore by layer</small></span>
+                  <i>Advanced</i>
+                </button>
+                <button class="lab-tab" type="button" data-lab="dp">
+                  <span class="lab-tab-icon" aria-hidden="true">▦</span>
+                  <span><strong>Dynamic programming</strong><small>Reuse answers</small></span>
+                  <i>Advanced</i>
+                </button>
+              </div>
+              <div class="lab-legend">
+                <p><i class="legend-active"></i> Active</p>
+                <p><i class="legend-done"></i> Complete</p>
+                <p><i class="legend-rest"></i> Waiting</p>
+              </div>
+            </div>
+
+            <div class="lab-main">
+              <div class="lab-main-head">
+                <div>
+                  <p data-lab-kicker>ALGORITHM · SORTING</p>
+                  <h3 data-lab-title>Bubble sort</h3>
+                </div>
+                <div class="lab-status">
+                  <span>STEP</span>
+                  <strong><b data-lab-step>1</b> / <b data-lab-total>1</b></strong>
+                </div>
+              </div>
+
+              <div class="visual-stage" data-visual-stage aria-live="polite"></div>
+
+              <div class="step-explanation">
+                <span class="step-badge" data-step-badge>01</span>
+                <div>
+                  <p>WHAT IS HAPPENING</p>
+                  <strong data-step-title>Start with the full unsorted list.</strong>
+                  <span data-step-detail>We will compare neighboring values from left to right.</span>
+                </div>
+              </div>
+
+              <div class="lab-controls">
+                <button class="control-button" type="button" aria-label="Reset visualization" data-lab-reset>
+                  ↺
+                </button>
+                <button class="control-button" type="button" aria-label="Previous step" data-lab-previous>
+                  ←
+                </button>
+                <button class="play-button" type="button" data-lab-play>
+                  <span aria-hidden="true">▶</span> Play
+                </button>
+                <button class="control-button" type="button" aria-label="Next step" data-lab-next>
+                  →
+                </button>
+                <label class="speed-control">
+                  <span>Speed</span>
+                  <select data-lab-speed aria-label="Animation speed">
+                    <option value="1400">Slow</option>
+                    <option value="850" selected>Normal</option>
+                    <option value="450">Fast</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <aside class="lab-code">
+              <div class="lab-code-head">
+                <span>PSEUDOCODE</span>
+                <span class="language-dot"><i></i> Plain English</span>
+              </div>
+              <ol class="pseudo-lines" data-lab-code></ol>
+              <a class="code-concept-link" href="#learn" data-lab-concept>
+                Read the complete concept <span aria-hidden="true">→</span>
+              </a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="patterns-section section-space" id="patterns">
+        <div class="page-shell">
+          <div class="patterns-intro">
+            <div>
+              <p class="eyebrow"><span></span> Chapter zero · the original collection</p>
+              <h2>Before the algorithm,<br />learn to control the loop.</h2>
+            </div>
+            <div class="patterns-intro-copy">
+              <p>
+                Pattern World began with 83 verified Python exercises. They remain the first chapter:
+                a visual way to learn nested loops, conditions, sequences, and spacing.
+              </p>
+              <dl>
+                <div><dt>83</dt><dd>Python patterns</dd></div>
+                <div><dt>100%</dt><dd>verified outputs</dd></div>
+                <div><dt>5</dt><dd>sample input</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="pattern-explorer">
+            <div class="pattern-toolbar">
+              <label class="search-field pattern-search">
+                <span aria-hidden="true">⌕</span>
+                <span class="sr-only">Search patterns</span>
+                <input
+                  type="search"
+                  placeholder="Search the pattern library"
+                  autocomplete="off"
+                  data-pattern-search
+                />
+              </label>
+              <div class="filter-group" aria-label="Filter pattern type">
+                <button class="filter-button is-active" type="button" data-pattern-category="all">All</button>
+                <button class="filter-button" type="button" data-pattern-category="star">Stars</button>
+                <button class="filter-button" type="button" data-pattern-category="number">Numbers</button>
+              </div>
+              <label class="select-field">
+                <span class="sr-only">Filter patterns by difficulty</span>
+                <select data-pattern-difficulty>
+                  <option value="all">Every level</option>
+                  <option value="Starter">Starter</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Advanced">Advanced</option>
+                </select>
+              </label>
+            </div>
+            <div class="pattern-results-line" aria-live="polite">
+              <p><strong data-pattern-count>0</strong> patterns</p>
+              <p>Preview generated with input <code>5</code></p>
+            </div>
+            <div class="pattern-grid" data-pattern-grid>
+              <div class="loading-card">Loading the original pattern library…</div>
+            </div>
+            <div class="load-more-wrap">
+              <button class="button button-secondary" type="button" data-pattern-load-more hidden>
+                Show more patterns
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="study-section section-space" id="study-plan">
+        <div class="page-shell study-shell">
+          <div class="section-heading">
+            <p class="eyebrow"><span></span> A simple study rhythm</p>
+            <h2>Read less. Explain more.</h2>
+            <p>
+              Use each concept as a short interview rehearsal. The goal is not to finish cards; it
+              is to build a mental model you can explain without the card.
+            </p>
+          </div>
+          <ol class="study-steps">
+            <li>
+              <span>01</span>
+              <div><strong>See the idea</strong><p>Read the intuition and identify the signal that tells you when it applies.</p></div>
+            </li>
+            <li>
+              <span>02</span>
+              <div><strong>Trace the state</strong><p>Use the visual lab or draw one small example on paper.</p></div>
+            </li>
+            <li>
+              <span>03</span>
+              <div><strong>Say the steps</strong><p>Explain the pseudocode before looking at the Python version.</p></div>
+            </li>
+            <li>
+              <span>04</span>
+              <div><strong>Name the tradeoff</strong><p>Finish with complexity, limitations, and what would make you choose differently.</p></div>
+            </li>
+          </ol>
+          <a class="button button-primary" href="#learn">Choose your first concept <span>↑</span></a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer page-shell">
-      <p>Pattern World · A Python learning project by Dhruvi Turakhia</p>
-      <a href="https://github.com/DhruviTurakhia" target="_blank" rel="noreferrer">
-        More on GitHub <span aria-hidden="true">↗</span>
-      </a>
+    <footer class="site-footer">
+      <div class="page-shell footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="#top">
+            <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="brand-copy">
+              <strong>Pattern World</strong>
+              <small>Visual interview atlas</small>
+            </span>
+          </a>
+          <p>
+            A growing, open learning path for Python interviews—from visible loops to scalable
+            systems.
+          </p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <p>LEARN</p>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#learn">Concept atlas</a>
+            <a href="#visualizer">Visual lab</a>
+          </div>
+          <div>
+            <p>PROJECT</p>
+            <a href="#patterns">83 original patterns</a>
+            <a href="https://github.com/DhruviTurakhia/Pattern-World" target="_blank" rel="noreferrer">Source on GitHub ↗</a>
+            <a href="https://github.com/DhruviTurakhia" target="_blank" rel="noreferrer">Dhruvi Turakhia ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="page-shell footer-bottom">
+        <p>Built to make difficult ideas feel visible.</p>
+        <p>Python · HTML · CSS · JavaScript · GitHub Pages</p>
+      </div>
     </footer>
 
-    <dialog class="code-dialog" data-dialog>
-      <div class="dialog-header">
-        <div>
-          <p class="dialog-kicker" data-dialog-category></p>
-          <h2 data-dialog-title>Pattern</h2>
+    <dialog class="detail-dialog" data-concept-dialog>
+      <button class="dialog-close" type="button" aria-label="Close concept guide" data-close-concept>×</button>
+      <div class="detail-dialog-inner">
+        <aside class="detail-aside">
+          <p class="detail-track" data-detail-track>ALGORITHMS</p>
+          <span class="detail-number" data-detail-number>01</span>
+          <div class="detail-level"><i></i><span data-detail-level>Basic</span></div>
+          <div class="detail-jump">
+            <p>IN THIS GUIDE</p>
+            <a href="#detail-intuition">Intuition</a>
+            <a href="#detail-steps">What to remember</a>
+            <a href="#detail-code">Pseudocode &amp; Python</a>
+          </div>
+        </aside>
+        <article class="detail-content">
+          <p class="detail-eyebrow" data-detail-eyebrow>START HERE</p>
+          <h2 data-detail-title>Visible loops</h2>
+          <p class="detail-summary" data-detail-summary></p>
+
+          <section id="detail-intuition">
+            <span class="detail-section-number">01</span>
+            <div>
+              <p class="detail-section-label">THE INTUITION</p>
+              <p class="detail-intuition" data-detail-intuition></p>
+            </div>
+          </section>
+
+          <section id="detail-steps">
+            <span class="detail-section-number">02</span>
+            <div>
+              <p class="detail-section-label">WHAT TO REMEMBER</p>
+              <ul class="detail-points" data-detail-points></ul>
+              <div class="complexity-note">
+                <span>COMPLEXITY / TRADEOFF</span>
+                <p data-detail-complexity></p>
+              </div>
+            </div>
+          </section>
+
+          <section id="detail-code">
+            <span class="detail-section-number">03</span>
+            <div class="detail-code-wrap">
+              <p class="detail-section-label">FROM IDEA TO CODE</p>
+              <div class="code-tabs" role="tablist" aria-label="Choose code format">
+                <button class="code-tab is-active" type="button" data-code-tab="pseudo">Pseudocode</button>
+                <button class="code-tab" type="button" data-code-tab="python">Python</button>
+                <button class="copy-code" type="button" data-copy-concept>Copy</button>
+              </div>
+              <pre class="detail-code-block"><code data-detail-code></code></pre>
+            </div>
+          </section>
+
+          <div class="related-concepts">
+            <p>KEEP CONNECTING</p>
+            <div data-related-concepts></div>
+          </div>
+        </article>
+      </div>
+    </dialog>
+
+    <dialog class="pattern-dialog" data-pattern-dialog>
+      <button class="dialog-close" type="button" aria-label="Close pattern" data-close-pattern>×</button>
+      <div class="pattern-dialog-inner">
+        <div class="pattern-dialog-head">
+          <div>
+            <p data-pattern-dialog-meta>STAR COLLECTION · STARTER</p>
+            <h2 data-pattern-dialog-title>Star Pattern 1</h2>
+          </div>
+          <span>INPUT = 5</span>
         </div>
-        <button class="icon-button" type="button" aria-label="Close code viewer" data-close-dialog>
-          ×
-        </button>
-      </div>
-
-      <div class="dialog-tabs" role="tablist" aria-label="Pattern detail">
-        <button
-          class="dialog-tab is-active"
-          type="button"
-          role="tab"
-          aria-selected="true"
-          data-tab="code"
-        >
-          Python
-        </button>
-        <button
-          class="dialog-tab"
-          type="button"
-          role="tab"
-          aria-selected="false"
-          data-tab="output"
-        >
-          Output
-        </button>
-      </div>
-
-      <div class="dialog-panel is-active" role="tabpanel" data-panel="code">
-        <pre><code data-dialog-code></code></pre>
-      </div>
-      <div class="dialog-panel output-panel" role="tabpanel" data-panel="output">
-        <pre data-dialog-output></pre>
-      </div>
-
-      <div class="dialog-actions">
-        <button class="button button-primary" type="button" data-copy-code>Copy Python code</button>
-        <a
-          class="button button-secondary"
-          href="#"
-          target="_blank"
-          rel="noreferrer"
-          data-source-link
-        >
-          Open source file
+        <div class="pattern-dialog-grid">
+          <section>
+            <div class="code-panel-head"><span>PYTHON</span><button type="button" data-copy-pattern>Copy code</button></div>
+            <pre><code data-pattern-dialog-code></code></pre>
+          </section>
+          <section>
+            <div class="code-panel-head"><span>OUTPUT</span><span>Verified</span></div>
+            <pre class="pattern-dialog-output" data-pattern-dialog-output></pre>
+          </section>
+        </div>
+        <a class="button button-secondary" href="#" target="_blank" rel="noreferrer" data-pattern-source>
+          Open the source file <span aria-hidden="true">↗</span>
         </a>
       </div>
     </dialog>
